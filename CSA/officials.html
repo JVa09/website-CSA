@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="logo_san.png">
+    <title>Centro San Antonio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap">
+    <style>
+     .content-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .main-content {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            width: 80%;
+            margin: 0 auto; 
+        }
+        .left-column {
+            width: 100%;
+            max-width: 1200px;
+            margin-left: -50px;
+            box-sizing: border-box;
+        }
+        .left-column img.map-image {
+            float: right;
+            margin: 0 0 10px 20px;
+            max-width: 50%;
+        }
+        .left-column p {
+            text-align: justify;
+        }
+        .development-thrusts {
+            display: flex;
+            justify-content: space-between;
+        }
+        .development-thrusts .column {
+            width: 48%;
+            text-align: center;
+        }
+        .development-thrusts .column p,
+        .development-thrusts .column ul {
+            text-align: left;
+        }
+        .development-thrusts .column ul {
+            margin-bottom: 20px;
+        }
+        h2 {
+            text-align: center;
+            width: 100%;
+        }
+        .development-thrusts h3 {
+            text-align: center;
+            width: 100%;
+        }
+        .two-column {
+            display: flex;
+            justify-content: space-between;
+        }
+        .two-column .column {
+            width: 48%;
+        }
+
+        .navbar {
+            position: sticky;
+            top: 0;
+            background-color: #12406b; 
+            z-index: 1000; 
+        }
+        hr{
+            margin: 0;
+            padding: 0;
+        }
+        .main-content h1{
+            margin-left: -800px;
+        }
+    </style>
+</head>
+<body>
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v20.0" nonce="pv8hdZ9l"></script>
+    <div class="bg_header">
+        <header>
+            <div class="header-content">
+                <div class="left-content">
+                    <div class="logo-container">
+                        <img src="logo_san.png" alt="Barangay Logo" class="logo">
+                        <h1><span style="font-size: larger;">Barangay Centro San Antonio</span><br><hr style="border: 2px solid #b9203f;"><span style="font-size: large;">City of Ilagan, Isabela</span></h1>
+                    </div>
+                    <nav class="navbar">
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li class="dropdown">
+                                <a href="about.html">About Us</a>
+                                <div class="dropdown-content">
+                                    <a href="about.html">History of Barangay Centro San Antonio</a>
+                                    <div class="dropdown-submenu">
+                                        <a href="about.html#dev">Development Thrusts</a>
+                                        <div class="dropdown-submenu-content">
+                                            <a href="about.html#dev">Mission</a>
+                                            <a href="about.html#dev">Vision</a>
+                                        </div>
+                                    </div>
+                                    <a href="about.html#pro">Profile of the Barangay</a>
+                                </div>
+                            </li>
+                            <li><a href="officials.html" style="background-color: #ffc81b; color: #12406b; border-radius: 10px;">Barangay Officials</a></li>
+                            <li><a href="news.html">News/Events</a></li>
+                            <li><a href="contact.html">Contact Us</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div id="date-time" class="date-time"></div>
+            </div>
+        </header>
+    </div>
+    <div class="content-wrapper">
+                <div class="container">
+                    <div class="headcon">
+                        <h2>Barangay Officials</h2>
+                    </div>
+                    <div class="tree" style="background-image: url('brglogo.png') ; background-repeat: no-repeat; background-size: contain; background-position-x: center; background-position-y: center; background-blend-mode: color-burn;">
+
+                        <ul>
+                            <li>
+                                <a href="#" style="width: 170px;"><img src="bgcap.png" alt="Barangay Captain"><span><b>Barangay Captain</b><hr><br>NESTOR T. TAMULTO</span></a>
+                                <ul>
+                                    <li>
+                                        <a href="#"><img src="kaga1.png" alt="Kagawad"><span><b>Kagawad</b><hr><br>TIRSO T. TAMULTO</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><img src="kaga2.png" alt="Kagawad"><span><b>Kagawad</b><hr><br>AMANCHO B. MALTIZO</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><img src="kaga3.png" alt="Kagawad"><span><b>Kagawad</b><hr><br>JERRY R. BAYSAC</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><img src="kaga4.png" alt="Kagawad"><span><b>Kagawad</b><hr><br>JOWELL C. MANDING</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><img src="kaga5.png" alt="Kagawad"><span><b>Kagawad</b><hr><br>BRENDALYN B. GABUYO</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><img src="kaga6.png" alt="Kagawad"><span><b>Kagawad</b><hr><br>CLIFFORD DAN C. CAYAPAN</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><img src="kaga7.png" alt="Kagawad"><span><b>Kagawad</b><hr><br>IMELDA A. CASAUAY</span></a>
+                                    </li>
+                                    
+                                </ul>
+                                <ul>
+                                    <li>
+                                        <a href="#"><img src="sec.png" alt="Secretary"><span><b>Secretary</b><hr><br>EL SHAIRA JOY M. MANUEL</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><img src="tres.png" alt="Treasurer"><span><b>Treasurer</b><hr><br>LEANDRO G. VIERNES</span></a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    </div>
+                </div>
+                
+                <div class="container" style="margin-top: 100px;">
+                    <div class="headcon">
+                        <h2>SK Officials</h2>
+                    </div>
+                    
+                    <div class="tree" style="background-image: url('sklogotra.png') ; background-repeat: no-repeat; background-size: contain; background-position-x: center; background-position-y: center; background-blend-mode: color-burn;">
+                        
+                        <ul>
+                            <li>
+                                <a href="#" style="width: 170px;"><img src="skcha.png" alt="Barangay Captain"><span><b><br>SK CHAIRMAN</b><hr><br>AEROM JOSH M. CABALONGA</span></a>
+                                <ul>
+                                    <li>
+                                        <a href="#"><img src="sk1.png" alt="Kagawad"><span><b>SK Kagawad</b><hr><br>REXON JHON G. CABANSAG</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><img src="sk4.png" alt="Kagawad"><span><b>SK Kagawad</b><hr><br>MARK JAY P. COLOMA</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><img src="sk3.png" alt="Kagawad"><span><b>SK Kagawad</b><hr><br>KENETH Q. MANUEL</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><img src="sk5.png" alt="Kagawad"><span><b>SK Kagawad</b><hr><br>EFREN JOHN H. JOSE</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><img src="sk6.png" alt="Kagawad"><span><b>SK Kagawad</b><hr><br>ANA MARIE M. ACHOARA</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><img src="sk7.png" alt="Kagawad"><span><b>SK Kagawad</b><hr><br>JESLY T. LIMON</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><img src="sk8.png" alt="Kagawad"><span><b>SK Kagawad</b><hr><br>PRISCILLA MARIE C. MACASADDUG</span></a>
+                                    </li>
+                                    
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    </div>
+    
+                    <footer>
+                        <p>Copyright &copy; 2024 Barangay Centro San Antonio, City of Ilagan, Isabela</p>
+                        <p>Designed by: Jayvee Alicando and Kay Cee Laureta</p>
+                    </footer>
+                    <script src="script.js"></script>
+                    
+    
+</body>
+</html>

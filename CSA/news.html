@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="logo_san.png">
+    <title>Centro San Antonio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap">
+    <style>
+        
+        .content-wrapper {
+            display: flex;  
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .main-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 80%;
+            margin: 0 auto;
+        }
+        .left-column {
+            width: 100%;
+            max-width: 1200px;
+            box-sizing: border-box;
+        }
+        .left-column img.map-image {
+            float: right;
+            margin: 0 0 10px 20px;
+            max-width: 50%;
+        }
+        .left-column p {
+            text-align: justify;
+        }
+        .development-thrusts {
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: space-between;
+        }
+        .development-thrusts .column {
+            margin: 15px;
+            padding: 10px;
+            border-radius: 5px;
+            background-color: #fff;
+            color: #12406b;
+            width: 48%;
+            text-align: center;
+        }
+        .development-thrusts .column p,
+        .development-thrusts .column ul {
+            text-align: justify;
+        }
+        .mapcsadiv img {
+            margin: 20px;
+        }
+        .development-thrusts .column ul {
+            margin-bottom: 20px;
+        }
+        .development-thrusts .column .two-column ul {
+            font-size: 15px;
+        }
+        h2 {
+            font-size: 20px;
+            text-align: center;
+            width: 100%;
+        }
+        .development-thrusts h3 {
+            text-align: center;
+            width: 100%;
+        }
+        .left-column {
+    flex: 2;
+    margin-right: 20px;
+    margin-left: 40px;
+}
+        .two-column {
+            display: flex;
+            justify-content: space-between;
+        }
+        .two-column .column {
+            width: 48%;
+        }
+        .navbar {
+            position: sticky;
+            top: 0;
+            background-color: #12406b;
+            z-index: 1000;
+        }
+        .bodybox {
+            padding: 20px;
+        }
+        .bodybox img {
+            padding-top: 60px;
+            border-radius: 8px;
+            max-width: 500px;
+            height: auto;
+            display: block;
+        }
+        a:link {
+            color: #ffc81b;
+            background-color: transparent;
+            text-decoration: underline;
+        }
+        a:visited {
+            color: #dfd999;
+            background-color: transparent;
+            text-decoration: underline;
+        }
+        .date {
+            text-decoration: underline;
+        }
+        a:hover {
+            color: rgb(248, 243, 243);
+            background-color: transparent;
+            text-decoration: underline;
+        }
+   
+        .slideshow-container {
+            max-width: 900px;
+            position: relative;
+            margin: auto;
+        }
+        .slides {
+            display: none;
+        }
+        .prev, .next {
+            cursor: pointer;
+            position: absolute; 
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            margin-top: -22px; 
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+            background-color: #12406b;
+        }
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+        .prev {
+            left: 0;
+            border-radius: 3px 0 0 3px;
+        }
+        .slideshow-buttons {
+            text-align: center;
+            margin-top: 10px;
+        }
+        .fade {
+            animation-name: fade;
+            animation-duration: 1.5s;
+        }
+        @keyframes fade {
+            from {opacity: .4} 
+            to {opacity: 1}
+        }
+        .main-content h1{
+            margin-left: -950px;
+        }
+    </style>
+    <script src="script.js"></script>
+</head>
+<body>
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v20.0" nonce="pv8hdZ9l"></script>
+    <div class="bg_header">
+        <header>
+            <div class="header-content">
+                <div class="left-content">
+                    <div class="logo-container">
+                        <img src="logo_san.png" alt="Barangay Logo" class="logo">
+                        <h1>
+                            <span style="font-size: larger;">Barangay Centro San Antonio</span>
+                            <br>
+                            <hr style="border: 2px solid #b9203f;">
+                            <span style="font-size: large;">City of Ilagan, Isabela</span>
+                        </h1>
+                    </div>
+                    <nav class="navbar">
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li class="dropdown">
+                                <a href="about.html">About Us</a>
+                                <div class="dropdown-content">
+                                    <a href="about.html">History of Barangay Centro San Antonio</a>
+                                    <div class="dropdown-submenu">
+                                        <a href="about.html#dev">Development Thrusts</a>
+                                        <div class="dropdown-submenu-content">
+                                            <a href="about.html#dev">Mission</a>
+                                            <a href="about.html#dev">Vision</a>
+                                        </div>
+                                    </div>
+                                    <a href="about.html#pro">Profile of the Barangay</a>
+                                </div>
+                            </li>
+                            <li><a href="officials.html">Barangay Officials</a></li>
+                            <li><a href="news.html" style="background-color: #ffc81b; color: #12406b; border-radius: 10px;">News/Events</a></li>
+                            <li><a href="contact.html">Contact Us</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div id="date-time" class="date-time"></div>
+            </div>
+        </header>
+    </div>
+
+    <div class="content-wrapper">
+        <div class="main-content">
+            <h1>News and Events</h1>
+            <div class="left-column">
+                <div class="bodybox" style="padding-top: 20px;">
+                    <img src="news/news1.jpg" alt="news" class="map-image">
+                    <article style="margin-bottom: 20px;">
+                        <span style="font-size: larger; font-weight: 600;">Latest:</span>
+                        <hr style="border: 2px solid #df1940; margin: 0; padding: 0;">
+                        <br>
+                        <span style="font-size: larger; font-style: italic;">
+                            <b>"Sa PPAN: Sama-sama sa Nutrisyong Sapat Para sa Lahat"</b>
+                        </span>
+                        <br><br>
+                        <span>
+                            TIGNAN: Bilang pakikiisa sa selebrasyon ng 50th Nutrition Month 2024, ang ating CSWDO and BH Workers, kasama ang Brgy. Officials ay nagkaisa upang bigyang halaga ang nutrisyon ng bawat bata sa ating barangay nitong Hulyo 26, 2024.
+                            <br><br>
+                            Nagkaroon ng feeding program para sa mga bata. Namigay rin po tayo ng mga gulay, prutas at vitamins upang mas lalong mapalakas ang resistansya ng mga bata. Maraming salamat po sa ating butihing bisita sa pagbibigay ng mensahe, Dra. Joan Paula Pagaliluan at sa lahat po ng nagbigay ng suporta at pumunta sa selebrasyong ito. Agyaman!
+                            <br><a href="https://web.facebook.com/share/p/fA3ZGaVPAqT4h9id/" target="_blank">See more</a>
+                            <br><br><span class="date" style="font-size: small; align-self: flex-end;">Date Posted: July 27, 2024</span>
+                        </span>
+                    </article>
+                    <hr style="border: 2px solid #4e7090; margin: 0; padding: 0;">
+                    <img src="news/news2.jpg" alt="news" class="map-image">
+                    <article style="margin-bottom: 20px;">
+                        <br>
+                        <span style="font-size: larger; font-style: italic;">
+                            <b>#BarangayUpdate: Campaign for Community Garden</b>
+                        </span>
+                        <br><br>
+                        <span>
+                            Sinimulan na ng mga residente ng Purok 5 ang pagsasagawa ng kanilang Purok Garden sa pamumuno ng kanilang Purok Kagawad, Kag. Brenda Gabuyo. Maraming salamat po sainyong agarang pagtugon sa Campaign for Community Garden. Inaasahan po namin ang ibang purok na magsimula na rin sa kani-kanilang Purok Garden. Agyaman!
+                            <br><br>
+                            #BagongCentroSanAntonio
+                            <br>
+                            #GulayanSaBarangay
+                            <br><a href="https://web.facebook.com/share/p/41qk38e9aXNJtnvT/" target="_blank">See more</a>
+                            <br><br><span class="date" style="font-size: small; align-self: flex-end;">Date Posted: July 25, 2024</span>
+                        </span>
+                    </article>
+
+                    <hr style="border: 2px solid #4e7090; margin: 0; padding: 0;">
+                    <img src="news/transpa.jpg" alt="news" class="map-image">
+                    <article style="margin-bottom: 30px;">
+                        <br>
+                        <span style="font-size: larger; font-style: italic;">
+                            <b>ULAT PINANSYAL PARA SA BARANGAY FIESTA 2024</b>
+                        </span>
+                        <br><br>
+                        <span>
+                            Sa ating layuning mapanatili ang transparency at pagkakaroon ng tiwala sa barangay, malugod naming ipinapakita ang detalyadong ulat pinansyal ng 2024 Barangay Fiesta. Nais naming ipakita sa lahat kung paano ginamit ang bawat sentimo ng pondo mula sa mga donasyon at iba pang pinagkunan ng kita, hanggang sa mga gastusin para sa mga programa at aktibidad.
+                            <br><br>
+                            Ang inyong suporta at pagtitiwala ay mahalaga sa atin, kaya't nararapat lamang na kayo ay aming ipaalam at bigyan ng kumpletong report tungkol sa pinansyal na aspeto ng ating Fiesta. Ang sumusunod na ulat ay naglalaman ng impormasyon ukol sa kita at gastusin, pati na rin ang balanse ng ating pondo. Ang natitirang balanse ay ilalaan para sa pagpapabuti at paglalagay ng grills sa bakod at gate ng barangay hall, pati na rin sa iba pang mga proyekto na mapagpapasyahan pa.
+                            <br><br>
+                            Salamat sa inyong walang sawang pakikiisa at pagtulong upang maging matagumpay ang ating pagdiriwang!<br><br>
+                Para sa karagdagang katanungan o komento, huwag mag-atubiling makipag-ugnayan sa ating Barangay Hall.<br><br>
+
+                            #BagongCentroSanAntonio
+                            <br>
+                            #GulayanSaBarangay
+                            <br><a href="https://web.facebook.com/share/p/dZ9jNuwLgbejRsoN/" target="_blank">See more</a>
+                            <br><br><span class="date" style="font-size: small; align-self: flex-end;">Date Posted: June 24, 2024</span>
+                        </span>
+                    </article>
+
+                    <hr style="border: 2px solid #4e7090; margin: 0; padding: 0;">
+                    <img src="news/news4.jpg" alt="news" class="map-image" style="width: 400px;">
+                    <article>
+                        <br>
+                        <span style="font-size: larger; font-style: italic;">
+                            <b>Happy Fiesta, San Antonio! </b>
+                        </span>
+                        <br><br>
+                        <span>
+                            Malugod na ipinagdiriwang ng Barangay Centro San Antonio ang Kapistahan ni San Antonio de Padua. Sa araw na ito, ating pinapahalagahan at ginugunita ang buhay at mga aral ni San Antonio, na kilala sa kanyang kabutihan at mga himala. Sama-sama nating ipagdiwang ang kanyang kapistahan sa pamamagitan ng pananampalataya, pagkakaisa, at pagtutulungan.
+                                       <br><br>
+                                       Nawa’y patuloy tayong gabayan ni San Antonio de Padua sa ating pang-araw-araw na buhay. Mabuhay ang ating patron! Mabuhay ang Barangay Centro San Antonio! 
+                            <br>
+                         
+                            <a href="https://web.facebook.com/share/p/jTWHS9w3GEKBeS9a/" target="_blank">See more</a>
+                            <br><br><span class="date" style="font-size: small; align-self: flex-end;">Date Posted: June 13, 2024</span>
+                        </span>
+                    </article>
+
+                </div>
+
+                <div class="bodybox" style="padding-top: 20px; padding-bottom: 20px;">
+                    <div class="slideshow-container">
+                        <div class="pictures">
+                            <div class="slides fade">
+                                <img src="news/Group 1.png" alt="news" class="map-image" style="width:100%">
+                            </div>
+                            <div class="slides fade">
+                                <img src="news/Group 2.png" alt="news" class="map-image" style="width:100%">
+                            </div>
+                            <div class="slides fade">
+                                <img src="news/Group 3.png" alt="news" class="map-image" style="width:100%">
+                            </div>
+                            <div class="slides fade">
+                                <img src="news/Group 4.png" alt="news" class="map-image" style="width:100%">
+                            </div>
+                            <div class="slides fade">
+                                <img src="news/Group 5.png" alt="news" class="map-image" style="width:100%">
+                            </div>
+                            <div class="slides fade">
+                                <img src="news/Group 6.png" alt="news" class="map-image" style="width:100%">
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <article style="margin-bottom: 40px;">
+                        <span style="font-size: larger; font-weight: 600;">Barangay Achievements:</span>
+                        <hr style="border: 2px solid #df1940; margin: 0; padding: 0;">
+                        <br>
+                        <span style="font-size: larger; font-style: italic;">
+                            <b>Celebrating Our Community's Success</b>
+                        </span>
+                        <br><br>
+                        <span>
+                            Discover the remarkable accomplishments of our Barangay and its residents. From community projects to individual achievements, this section highlights the dedication, hard work, and spirit that make our Barangay a thriving and inspiring place to live. Join us in celebrating these milestones that showcase the strength and unity of our community.
+                            <br><br><span class="date" style="font-size: small; align-self: flex-end;"></span>
+                            
+                        </span>
+                                                
+                    </article>
+                    <hr style="border: 2px solid #4e7090; margin: 0; padding: 0;">
+                    <img src="news/news3.jpg" alt="news" class="map-image" style="width: 400px;">
+                    <article style="margin-bottom: 120px;">
+                        <br>
+                        <span style="font-size: larger; font-style: italic;">
+                            <b>#Panagdayaw: </b>
+                        </span>
+                        <br>
+                        <span>
+                            Congratulations, Jessica A. Tamulto, of Purok 1, Centro San Antonio, for being hailed as 1st Place in the KKDAT-Ilagan Chapter Infographic Making Contest (Drugs): Barangay Edition. 
+                            <br><br>
+                            Thank you for representing our beloved barangay.
+                            <br><br>
+                            #BagongCentroSanAntonio
+                            <br><a href="https://web.facebook.com/share/p/W9zMmka5N35EXJUm/" target="_blank">See more</a>
+                            <br><br><span class="date" style="font-size: small; align-self: flex-end;">Date Posted: July 24, 2024</span>
+                        </span>
+                    </article>
+
+                    <hr style="border: 2px solid #4e7090; margin: 0; padding: 0;">
+                    <img src="achieve.jpg" alt="news" class="map-image" style="width: 400px;">
+                    <article>
+                        <br>
+                        <span style="font-size: larger; font-style: italic;">
+                            <b>𝐏𝐀𝐍𝐀𝐆𝐃𝐀𝐘𝐀𝐖: 𝐂𝐈𝐅𝐂 𝐡𝐚𝐢𝐥𝐞𝐝 𝐚𝐬 𝟑𝐫𝐝 𝐑𝐮𝐧𝐧𝐞𝐫- 𝐔𝐩 𝐝𝐮𝐫𝐢𝐧𝐠 𝐭𝐡𝐞 𝟏𝐬𝐭 𝐌𝐚𝐲𝐨𝐫'𝐬 𝐂𝐮𝐩 𝐀𝐬𝐢𝐝𝐞 𝐈𝐧𝐯𝐢𝐭𝐚𝐭𝐢𝐨𝐧𝐚𝐥 𝐅𝐨𝐨𝐭𝐛𝐚𝐥𝐥 𝐓𝐨𝐮𝐫𝐧𝐚𝐦𝐞𝐧𝐭 𝟐𝟎𝟐𝟒 </b>
+                        </span>
+                        <br><br>
+                        <span>
+                            On behalf of our beloved barangay, we would like to send you our warmest congratulations to your team!                            <br><br>
+                            Thank you for representing our beloved barangay.<br><br>
+                            𝐒𝐦𝐚𝐥𝐥 𝐛𝐮𝐭 𝐭𝐞𝐫𝐫𝐢𝐛𝐥𝐞!  Thank you for representing our Barangay and most especially, the City of Ilagan. We're so proud of you!
+                            <br><br>
+                            #BagongCentroSanAntonio
+                            <br><a href="https://web.facebook.com/share/p/5XbCqAmhz1emkeC8/" target="_blank">See more</a>
+                            <br><br><span class="date" style="font-size: small; align-self: flex-end;">Date Posted: June 30, 2024</span>
+                        </span>
+                    </article>
+
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>Copyright &copy; 2024 Barangay Centro San Antonio, City of Ilagan, Isabela</p>
+        <p>Designed by: Jayvee Alicando and Kay Cee Laureta</p>
+    </footer>
+ 
+    
+    <script>
+        let slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            let slides = document.getElementsByClassName("slides");
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {slideIndex = 1}
+            slides[slideIndex-1].style.display = "block";
+            setTimeout(showSlides, 5000);
+        }
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+    </script>
+</body>
+</html>

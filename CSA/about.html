@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="logo_san.png">
+    <title>Centro San Antonio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap">
+    <style>
+     .content-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .main-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 80%;
+            margin: 0 auto; 
+        }
+        .left-column {
+            width: 100%;
+            max-width: 1200px;
+            box-sizing: border-box;
+        }
+        .left-column img.map-image {
+            float: right;
+            margin: 0 0 10px 20px;
+            max-width: 50%;
+        }
+        .left-column p {
+            text-align: justify;
+        }
+        .development-thrusts {
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: space-between;
+        }
+        .development-thrusts .column {
+            margin: 15px;
+            padding: 10px;
+            border-radius: 5px;
+            background-color: #fff;
+            color: #12406b;
+            width: 48%;
+            text-align: center;
+        }
+        .development-thrusts .column p,
+        .development-thrusts .column ul {
+            text-align: justify;
+        }
+
+        .mapcsadiv img{
+            margin: 20px;
+        }
+        .development-thrusts .column ul {
+            
+            margin-bottom: 20px;
+        }
+        .development-thrusts .column .two-column ul{
+            font-size:15px;
+        }
+        h2 {
+            font-size: 20px;
+            text-align: center;
+            width: 100%;
+        }
+        .development-thrusts h3 {
+
+            text-align: center;
+            width: 100%;
+        }
+        .two-column {
+            display: flex;
+            justify-content: space-between;
+        }
+        .two-column .column {
+            width: 48%;
+        }
+
+        .navbar {
+            position: sticky;
+            top: 0;
+            background-color: #12406b; 
+            z-index: 1000; 
+        }
+        .main-content h1{
+            margin-left: -950px;
+        }
+        a:link {
+            color: #ffc81b;
+            background-color: transparent;
+            text-decoration: underline;
+        }
+        a:visited {
+            color: #dfd999;
+            background-color: transparent;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v20.0" nonce="pv8hdZ9l"></script>
+    <div class="bg_header">
+        <header>
+            <div class="header-content">
+                <div class="left-content">
+                    <div class="logo-container">
+                        <img src="logo_san.png" alt="Barangay Logo" class="logo">
+                        <h1><span style="font-size: larger;">Barangay Centro San Antonio</span><br><hr style="border: 2px solid #b9203f;"><span style="font-size: large;">City of Ilagan, Isabela</span></h1>
+                    </div>
+                    <nav class="navbar">
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li class="dropdown">
+                                <a href="about.html" style="background-color: #ffc81b; color: #12406b; border-radius: 10px;">About Us</a>
+                                <div class="dropdown-content">
+                                    <a href="about.html">History of Barangay Centro San Antonio</a>
+                                    <div class="dropdown-submenu">
+                                        <a href="about.html#dev">Development Thrusts</a>
+                                        <div class="dropdown-submenu-content">
+                                            <a href="about.html#dev">Mission</a>
+                                            <a href="about.html#dev">Vision</a>
+                                        </div>
+                                    </div>
+                                    <a href="about.html#pro">Profile of the Barangay</a>
+                                </div>
+                            </li>
+                            <li><a href="officials.html">Barangay Officials</a></li>
+                            <li><a href="news.html">News/Events</a></li>
+                            <li><a href="contact.html">Contact Us</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div id="date-time" class="date-time"></div>
+            </div>
+        </header>
+    </div>
+    <div class="content-wrapper">
+        <div class="main-content">
+            <h1>About Us</h1>
+            <div class="left-column">
+                <div class="bodybox">
+                <h2 id="histo">History of Barangay Centro San Antonio</h2>
+                <hr style="border: 2px solid #df1940;">
+                <img src="casa.JPG" alt="Map of Barangay Centro San Antonio" class="map-image">
+                <p>
+                    Barangay Centro San Antonio, the heart of the San Antonio Region, was founded by Spaniards 
+                    in 1881 as <i>Hacienda San Antonio</i> under the <i>Compañia General de Tabacos de Filipinas</i>, also 
+                    known as <i>Tabacalera</i>. The hacienda spanned over 7,000 hectares and was divided into 27 
+                    cabecerías. Initially, the main crop was tobacco, but tenants were later allowed to plant other 
+                    crops like rice and corn. The hacienda provided various benefits to tenants, including medical aid and 
+                    cash advances, and celebrated <i>St. Anthony's</i> feast day with public festivities. After a century, the hacienda 
+                    was sold to <abbr title=""></abbr>ANCA Corporation and later transferred to the Philippine government, which distributed the 
+                    land to the residents through the Land Reform Program.<br><br>
+
+                    Centro San Antonio, formed from several <i>cabecerías</i>, became 
+                    the largest barangay in the region with a land area of 994.1468 hectares and a
+                    population of 4,664. The barangay has seen significant development over the years,
+                    including the construction of hospitals, water systems, schools, roads, and various community
+                    facilities. The residents continue to uphold traditional Filipino customs and religious practices,
+                    such as the pamanhikan and the celebration of Holy Week. The barangay also hosts the annual Patronal
+                    Fiesta, attracting residents from across the region for religious and recreational activities.<span id="dev"></span><br><br>
+
+                    Under the leadership of various Punong Barangays, including the notable <b>Epifania T. Molina</b>, Centro San 
+                    Antonio has achieved numerous awards for its outstanding governance and community initiatives. 
+                    Recent developments include the improvement of infrastructure, establishment of street names, and promotion
+                    of organic farming practices. <b><a href="officials.html">Hon. Nestor T. Tamulto</a></b>, the current Punong Barangay, aims to continue this legacy
+                    of development with the support of the Sangguniang Barangay and the residents. The barangay's progress is
+                    evident in its thriving economy, modern amenities, and active community participation.<br><br>
+                </p>
+            </div>
+            <br><br>
+            <div class="bodybox">
+                <h2>Development Thrusts</h2>
+                <hr style="border: 2px solid #df1940;">
+                <div class="development-thrusts">
+                    <div class="column" id="mis">
+                        <h3>Mission</h3>
+                        <hr style="border: 2px solid #4e7090;">
+                        <p><span id="pro"></span>To improve the quality of life of the people and ensure a safe and peaceful community through active people’s participation in the efficient and effective delivery of basic services.</p>
+                    </div>
+                    <div class="column" id="vis">
+                        <h3>Vision</h3>
+                        <hr style="border: 2px solid #4e7090;">
+                        <p>Barangay Centro San Antonio: The premier producer of Vermi Fertilizer in the City of Ilagan with God-loving, healthy and self-reliant people living in a 
+                            safe, peaceful and friendly environment with progressive economy led by dedicated, transparent and accountable officials.</p>
+                    </div>
+                </div>
+            </div>
+            <br><br>
+            <div class="bodybox">
+                <h2 style="margin-top: 20px;">Profile of the Barangay</h2>
+                <hr style="border: 2px solid #df1940;">
+                <div class="development-thrusts">
+                    <div class="column">
+                        <h3>Physical Information</h3>
+                        <hr style="border: 2px solid #4e7090;">
+                        <ul>
+                            <li>Geographical Location</li>
+                            <p>Barangay Centro San Antonio is more or less 17 kilometers from Centro/Poblacion bounded by the following barangays:</p>
+                            <ul>
+                                <li>North: Barangays Fugu and Ballacong</li>
+                                <li>South: Barangay Yeban Sur</li>
+                                <li>East: Barangays Sindon Bayabo, Paliueg and Villa Imelda</li>
+                                <li>West: Barangays Gayong-gayong Sur and Norte, Salindingan</li>
+                            </ul>
+                        </ul>
+                        <div class="two-column">
+                            <div class="column">
+                                <ul>
+                                    <li>Type/Classification of Barangay:</li>
+                                    <ul>
+                                        <li>__x__ Rural</li>
+                                        <li>__x__ Upland</li>
+                                        <li>__x__ Agricultural</li>
+                                        <li>__x__ Fishing</li>
+                                        <li>__x__ Commercial</li>
+                                    </ul>
+                                    <li>Population: 5,095</li>
+                                </ul>
+                            </div>
+                            <div class="column">
+                                <ul>
+                                    <li>Total Land Area in hectares: <u>994.1468</u></li>
+                                    <ul>
+                                        <li>Residential :   159.0300 has.</li>
+                                        <li>Agricultural: 313.8700</li>
+                                        <li>Commercial  :   5.0200</li>
+                                        <li>Others      :   516.2268</li>
+                                    </ul>
+                                    
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <h3>Political Information</h3>
+                        <hr style="border: 2px solid #4e7090;">
+                        <ul>
+                            <li>Legal basis of creation: Presidential Decree No. 557-1974</li>
+                            <li>No. of Registered Voters: 2,556</li>
+                            <li>No. of Precincts: 14</li>
+                            <div class="mapcsadiv"> 
+                                <h3>Map of Centro San Antonio Ilagan City</h3>
+                                <hr style="border: 2px solid #4e7090;">
+                                <img src="mapcsa.jpg" class="mapcsa">
+                            </div>
+                        </ul>
+                    </div>
+                </div> 
+            </div>
+        </div>
+        </div>
+    </div>
+    <footer>
+
+        <p>Copyright &copy; 2024 Barangay Centro San Antonio, City of Ilagan, Isabela</p>
+        <p>Designed by: Jayvee Alicando and Kay Cee Laureta</p>
+    </footer>
+    <script src="script.js"></script>
+    
+</body>
+</html>

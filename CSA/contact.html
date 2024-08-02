@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="logo_san.png">
+    <title>Centro San Antonio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap">
+    <style>
+        .content-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .content-wrapper img{
+            margin-right: 3px;
+        }
+        .main-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 80%;
+            margin: 0 auto;
+            
+        }
+        .main-content h1{
+            margin-left: -950px;
+        }
+        .left-column {
+            width: 100%;
+            max-width: 1200px;
+            box-sizing: border-box;
+        }
+        .left-column img.map-image {
+            float: right;
+            margin: 0 0 10px 20px;
+            max-width: 50%;
+        }
+        .left-column p {
+            text-align: justify;
+        }
+        .hotlines {
+            display: flex;
+            justify-content: space-between;
+        }
+        .hotlines .column {
+            margin: 15px;
+            padding: 10px;
+            border-radius: 5px;
+            background-color: #fff;
+            color: #12406b;
+            width: 48%;
+            text-align: center;
+        }
+        .hotlines .column p,
+        .hotlines .column ul {
+            text-align: left;
+        }
+        .hotlines .column ul {
+            margin-bottom: 20px;
+        }
+        h2 {
+            text-align: center;
+            width: 100%;
+        }
+        .hotlines h3 {
+            text-align: center;
+            width: 100%;
+        }
+        .two-column {
+            display: flex;
+            justify-content: space-between;
+        }
+        .two-column .column {
+            width: 48%;
+        }
+
+        .navbar {
+            position: sticky;
+            top: 0;
+            background-color: #12406b; 
+            z-index: 1000; 
+        }
+        #agency{
+            list-style: none;
+        }
+        #directory{
+            line-height: 30px;
+        }
+    
+    </style>
+</head>
+<body>
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v20.0" nonce="pv8hdZ9l"></script>
+    <div class="bg_header">
+        <header>
+            <div class="header-content">
+                <div class="left-content">
+                    <div class="logo-container">
+                        <img src="logo_san.png" alt="Barangay Logo" class="logo">
+                        <h1><span style="font-size: larger;">Barangay Centro San Antonio</span><br><hr style="border: 2px solid #b9203f;"><span style="font-size: large;">City of Ilagan, Isabela</span></h1>
+                    </div>
+                    <nav class="navbar">
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li class="dropdown">
+                                <a href="about.html">About Us</a>
+                                <div class="dropdown-content">
+                                    <a href="about.html">History of Barangay Centro San Antonio</a>
+                                    <div class="dropdown-submenu">
+                                        <a href="about.html#dev">Development Thrusts</a>
+                                        <div class="dropdown-submenu-content">
+                                            <a href="about.html#dev">Mission</a>
+                                            <a href="about.html#dev">Vision</a>
+                                        </div>
+                                    </div>
+                                    <a href="about.html#pro">Profile of the Barangay</a>
+                                </div>
+                            </li>
+                            <li><a href="officials.html">Barangay Officials</a></li>
+                            <li><a href="news.html">News/Events</a></li>
+                            <li><a href="contact.html" style="background-color: #ffc81b; color: #12406b; border-radius: 10px;">Contact Us</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div id="date-time" class="date-time"></div>
+            </div>
+        </header>
+    </div>
+    <div class="content-wrapper">
+        <div class="main-content">
+            <h1>Contact Us</h1>
+            <div class="left-column">
+                
+                <div class="bodybox">
+                 <div style="margin-top: 20px; padding-bottom: 10px; width: 200pxs; border-radius: 10px;">   
+                    <center><img src="emergency.svg" alt="emergency" style="color: #fff;width: 50px; margin-top: 20px;margin-bottom: 0; padding-bottom: 0;"></center>
+                <h2 style="margin-top: 10px;  font-size: 30px;">Barangay Centro San Antonio Emergency Hotlines<hr style="border: 2px solid #b9203f;"></h2>
+                
+            </div>
+                <div class="hotlines">
+                    <div class="column">
+                        <h3>Emergency Hotlines</h3>
+                        <ul id="agency">
+                            <li><img src="BFP.png" alt="BFP logo" style="width: 25px; vertical-align: middle;">Bureau of Fire Protection</li>
+                            <ul>
+                                <li><img src="phone_icon.png" alt="phone icon" style="width: 15px;"> 0975-250-1218</li>
+                                <li><img src="phone_icon.png" alt="phone icon" style="width: 15px;"> 0939-776-9969</li>
+                            </ul>
+                            <li><img src="pnp-logo.png" alt="PNP logo" style="width: 25px; vertical-align: middle;">Philippine National Police - Ilagan</li>
+                            <ul>
+                                <li><img src="phone_icon.png" alt="phone icon" style="width: 15px;"> 624-2032</li>
+                                <li><img src="phone_icon.png" alt="phone icon" style="width: 15px;"> 0917-145-5432/0916-742-4412</li>
+                            </ul>
+                            <li><img src="iselco.png" alt="ISELCO logo" style="width: 25px; vertical-align: middle;">Isabela Electric Cooperative II</li>
+                            <ul>
+                                <li><img src="phone_icon.png" alt="phone icon" style="width: 15px;"> 0917-867-3030</li>
+                                <li><img src="phone_icon.png" alt="phone icon" style="width: 15px;"> 0939-903-3911</li>
+                            </ul>
+                            <li><img src="cdrmo.png" alt="CDRRMO logo" style="width: 25px; vertical-align: middle;">City Disaster Risk Reduction and Management Office<br>(Rescue 1124)</li>
+                            <ul>
+                                <li><img src="phone_icon.png" alt="phone icon" style="width: 15px;"> 624-0203</li>
+                                <li><img src="phone_icon.png" alt="phone icon" style="width: 15px;"> 0915-234-1124</li>
+                            </ul>
+                            <li><img src="dart.png" alt="PDRRMO logo" style="width: 25px; vertical-align: middle;">Provincial Disaster Risk Reduction and Management Office<br>(Rescue 831)</li>
+                            <ul>
+                                <li><img src="phone_icon.png" alt="phone icon" style="width: 15px;"> 078-323-0416</li>
+                                <li><img src="phone_icon.png" alt="phone icon" style="width: 15px;"> 0915-819-3187</li>
+                            </ul>
+                            <li><img src="address.svg" alt="address">Address: <address>Centro San Antonio, City of Ilagan, Isabela 3300
+                            </address>
+                            <div class="map-csa"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5196.179612106776!2d121.95485780366946!3d17.091555599282003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3385410000d6c71f%3A0xf7aa0b7930a1bd02!2sCentro%20San%20Antonio%20Barangay%20Hall%20(New)!5e1!3m2!1sen!2sph!4v1721829888542!5m2!1sen!2sph" 
+                                width="200" height="700" style="border:1; max-width: 450px; height: 700px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="column" id="directory">
+                        <h3>Directory</h3>
+                        <ul>
+                            <li><img src="phone_icon.png" alt="phone icon" style="width: 15px;"> Punong Barangay Nestor T. Tamulto - 0916 627 0876</li>
+                            <li><img src="phone_icon.png" alt="phone icon" style="width: 15px;"> Kag. Clifford Dan Cayapan - 09457 627 228</li>
+                            <li><img src="phone_icon.png" alt="phone icon" style="width: 15px;"> Kag. Brendalyn B. Gabuyo - 0906 783 2754</li>
+                            <li><img src="phone_icon.png" alt="phone icon" style="width: 15px;"> Kag. Amacho B. Maltizo - 0955 688 2351</li>
+                            <li><img src="phone_icon.png" alt="phone icon" style="width: 15px;"> Kag. Tirso T. Tamulto - 0936 287 3445</li>
+                            <li><img src="phone_icon.png" alt="phone icon" style="width: 15px;"> Kag. Jerry R. Baysac - 0935 547 0809</li>
+                            <li><img src="phone_icon.png" alt="phone icon" style="width: 15px;"> Kag. Jowell C. Manding - 0906 862 6052</li>
+                            <li><img src="phone_icon.png" alt="phone icon" style="width: 15px;"> Kag. Imelda A. Casauay - 0975 594 4205</li>
+                            <li><img src="phone_icon.png" alt="phone icon" style="width: 15px;"> SK Chairman Aerome Josh Cabalonga - 0949 336 5194</li>
+                            <li><img src="phone_icon.png" alt="phone icon" style="width: 15px;"> Sec. El Shaira Joy M. Manuel - 0953 055 9874</li>
+                            <li><img src="phone_icon.png" alt="phone icon" style="width: 15px;"> Treas. Leandro G. Viernes - 0915 220 7967</li>
+                            <li><img src="phone_icon.png" alt="phone icon" style="width: 15px;"> Clerk Encoder Kathryn Angel B. Lagat - 0945 283 5125</li>
+                            <li><img src="phone_icon.png" alt="phone icon" style="width: 15px;">Jane Pableo (Midwife) - 0935 616 2886</li>
+                            <li><img src="phone_icon.png" alt="phone icon" style="width: 15px;">Esminia B. Pajarillo (BNS) - 0935 663 4385</li>
+                            <li><img src="phone_icon.png" alt="phone icon" style="width: 15px;">Virginia R. Pajarillo (BHW) - 0975 906 3867</li>
+                            <li><img src="phone_icon.png" alt="phone icon" style="width: 15px;">Judy Ann Cabantac (BHW) - 0966 703 6503</li>
+                            <li><img src="phone_icon.png" alt="phone icon" style="width: 15px;">Remedios Baysac (BHW) - 0935 172 2180</li>
+                            <li><img src="phone_icon.png" alt="phone icon" style="width: 15px;">Rosalyn Visayas (BHW) - 0926 926 9824</li>
+                            <li><img src="phone_icon.png" alt="phone icon" style="width: 15px;">Grace Rayandayan (BHW) - 0975 075 8633</li>
+                            <li>Rescue 1124 - 
+                                <ul>
+                                    <li><img src="phone_icon.png" alt="phone icon" style="width: 15px;">Globe: 0915 234 1124</li>
+                                    <li><img src="phone_icon.png" alt="phone icon" style="width: 15px;">Smart: 0919 844 3346</li>
+                                </ul>
+                            </li>
+                            <li>Police Station - 
+                                <ul>
+                                    <li><img src="phone_icon.png" alt="phone icon" style="width: 15px;">0917 145 5432</li>
+                                    <li><img src="phone_icon.png" alt="phone icon" style="width: 15px;">IPPO: 0917 501 8212</li>
+                                </ul>
+                            </li>
+                            <li><img src="phone_icon.png" alt="phone icon" style="width: 15px;">Fire Station - Globe: 0975 250 1218</li>
+                            <li>CSWD Ilagan Bantay Bata - 
+                                <ul>
+                                    <li><img src="phone_icon.png" alt="phone icon" style="width: 15px;">Ma. Rosario Yumul: 0906 385 3026</li>
+                                    <li><img src="phone_icon.png" alt="phone icon" style="width: 15px;">Mel Quiades Sabado: 0917 798 9622</li>
+                                </ul>
+                            </li>
+                            <li><img src="phone_icon.png" alt="phone icon" style="width: 15px;">CMRRMC / CDRRMO - 078 6240203 / 0915 234 1124</li>
+                            <li><img src="phone_icon.png" alt="phone icon" style="width: 15px;">SDO - DRRM - 0905 792 2861</li>
+                            <li><img src="phone_icon.png" alt="phone icon" style="width: 15px;">DOH Region 2 - 304 - 3532</li>
+                            <li><img src="facebook.png" alt="fb" style="width: 15px;">Facebook Page - <a href="https://web.facebook.com/BagongCentrosanAntonio">Bagong Centro San Antonio</a></li>
+                            <li><img src="email.png" alt="email icon" style="width: 15px;">Email - <a href="mailto:centrosanantonio1981@gmail.com">centrosanantonio1981@gmail.com</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+            </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>Copyright &copy; 2024 Barangay Centro San Antonio, City of Ilagan, Isabela</p>
+        <p>Designed by: Jayvee Alicando and Kay Cee Laureta</p>
+    </footer>
+    <script src="script.js"></script>
+    
+</body>
+</html>
