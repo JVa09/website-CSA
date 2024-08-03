@@ -88,3 +88,11 @@ setInterval(() => {
   }
 }, 5000); 
 
+document.addEventListener('DOMContentLoaded', function () {
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navbar = document.querySelector('.navbar ul');
+
+    menuToggle.addEventListener('click', function () {
+        navbar.classList.toggle('show');
+    });
+});
