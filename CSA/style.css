@@ -1,12 +1,10 @@
-
-/*
-colors
+/* Colors
 #12406b DARKBLUE
 #df1940 BRIGHTRED
 #ffc81b MUSTARD
 #4e7090 COLDGRAY
-
 */
+
 body {
     height: 100%;
     margin: 0;
@@ -16,7 +14,6 @@ body {
         url('R.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    
 }
 
 body {
@@ -63,8 +60,7 @@ header {
     display: flex;
     align-items: center;
     width: 100%;
-    max-width: 2300px;
-    min-width: 1300px;
+    max-width: 100%;
     justify-content: space-between;
     color: #fff;
 }
@@ -97,6 +93,15 @@ header {
 .logo-container h1 {
     font-size: 20px;
     margin: 0;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 28px;
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
 }
 
 .navbar ul {
@@ -210,7 +215,8 @@ header {
     display: flex;
     justify-content: space-between;
     margin: auto;
-
+    width: 100%;
+    max-width: 1200px;
 }
 
 .left-column, .right-column {
@@ -218,8 +224,6 @@ header {
     padding: 20px;
     box-sizing: border-box;
 }
-
-
 
 .left-column h2 {
     margin-top: 20px;
@@ -248,7 +252,7 @@ p {
 
 #slideshow1 {
     max-width: 800px;
-    width: 1000px;
+    width: 100%;
     transform: scaleX(1.13);
     position: relative;
     margin: auto;
@@ -256,7 +260,7 @@ p {
 
 .slideshow-container {
     max-width: 800px;
-    width: 1000px;
+    width: 100%;
     position: relative;
     margin: auto;
 }
@@ -264,7 +268,6 @@ p {
 .mySlides1 {
     position: relative;
 }
-
 
 .description {
     position: absolute;
@@ -456,19 +459,23 @@ img {
     height: 200px;
     max-height: 400px;
 }
-.mapcsadiv{
+
+.mapcsadiv {
     margin-top: 60px;
 }
-.mapcsa{
+
+.mapcsa {
     width: 100%;
     max-width: 400px;
     height: auto;
 }
-article{
+
+article {
     font-size: large;
     line-height: 30px;
     text-align: justify;
 }
+
 footer {
     font-size: 10px;
     background-color: #12406b;
@@ -486,5 +493,164 @@ footer {
     color: #12406b;
     text-align: left;
 }
+.menu-toggle {
+    display: none;
+    font-size: 28px;
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+}
 
+/* Media Queries */
+@media (max-width: 1200px) {
+    body {
+        height: 100%;
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-image: 
+            linear-gradient(22deg, rgba(246, 211, 96, 0.796) 28%, rgba(248, 236, 200, 0.776) 98%),
+            url('R.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        max-width: 100%;
+    }
+    
+    .main-content {
+        flex-direction: column;
+        padding: 0 10px;
+    }
+    
+    .right-column {
+        max-width: 100%;
+        margin-right: 0;
+        margin-left: 0;
+    }
 
+    .content-wrapper {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    * {
+        font-size: xx-small;
+    }
+    
+    .header-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        width: 100%;
+        display: none; /* Hide the menu by default */
+        align-items: flex-start;
+        background-color: #12406b; /* Add background color for dropdown menu */
+        position: absolute; /* Position the menu absolutely */
+        top: 60px; /* Adjust this value as needed */
+        left: 0;
+        z-index: 1001;
+    }
+
+    .navbar ul.show {
+        display: flex; /* Show the menu when toggled */
+    }
+
+    .navbar ul li {
+        width: 100%;
+    }
+    
+    .navbar ul li a {
+        padding: 10px 20px;
+        width: 100%;
+    }
+    .navbar ul li a::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 6px;
+        background-color: #df1940;
+        transition: width 0.3s ease;
+    }
+    
+    .navbar ul li a:hover::after {
+        width: 100%;
+    }
+    
+    .navbar ul li a:hover {
+        background-color: #ffc81b;
+        color: #12406b;
+        border-radius: 5px;
+        box-shadow: #ffffff;
+        transition: all 0.3s ease 0.1s;
+        font-size: 1.001em;
+    }
+    .date-time {
+        margin-left: 0;
+        margin-top: 10px;
+        font-size: xx-small;
+    }
+    
+    .content-wrapper {
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+    
+    .main-content {
+        padding: 0 5px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .content-wrapper {
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+    
+    .left-content {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .logo-container h1 {
+        font-size: 18px;
+    }
+    
+    .navbar ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .navbar ul li a {
+        padding: 8px 15px;
+    }
+    
+    footer {
+        font-size: x-small;
+    }
+    
+    .right-column {
+        display: none;
+    }
+    
+    .right-column .bodybox .fb-page {
+        visibility: hidden;
+    }
+    .mySlides1 img{
+        height: 100px;
+    }
+}
