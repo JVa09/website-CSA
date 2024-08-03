@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,19 +8,24 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap">
     <style>
-        
         .content-wrapper {
-            display: flex;  
+            display: flex;
             flex-direction: column;
             align-items: center;
         }
-        
+        .content-wrapper img{
+            margin-right: 3px;
+        }
         .main-content {
             display: flex;
             flex-direction: column;
             align-items: center;
             width: 80%;
             margin: 0 auto;
+            
+        }
+        .main-content h1{
+            margin-left: -950px;
         }
         .left-column {
             width: 100%;
@@ -35,12 +40,11 @@
         .left-column p {
             text-align: justify;
         }
-        .development-thrusts {
-            margin-bottom: 20px;
+        .hotlines {
             display: flex;
             justify-content: space-between;
         }
-        .development-thrusts .column {
+        .hotlines .column {
             margin: 15px;
             padding: 10px;
             border-radius: 5px;
@@ -49,33 +53,21 @@
             width: 48%;
             text-align: center;
         }
-        .development-thrusts .column p,
-        .development-thrusts .column ul {
-            text-align: justify;
+        .hotlines .column p,
+        .hotlines .column ul {
+            text-align: left;
         }
-        .mapcsadiv img {
-            margin: 20px;
-        }
-        .development-thrusts .column ul {
+        .hotlines .column ul {
             margin-bottom: 20px;
         }
-        .development-thrusts .column .two-column ul {
-            font-size: 15px;
-        }
         h2 {
-            font-size: 20px;
             text-align: center;
             width: 100%;
         }
-        .development-thrusts h3 {
+        .hotlines h3 {
             text-align: center;
             width: 100%;
         }
-        .left-column {
-    flex: 2;
-    margin-right: 20px;
-    margin-left: 40px;
-}
         .two-column {
             display: flex;
             justify-content: space-between;
@@ -83,89 +75,21 @@
         .two-column .column {
             width: 48%;
         }
+
         .navbar {
             position: sticky;
             top: 0;
-            background-color: #12406b;
-            z-index: 1000;
+            background-color: #12406b; 
+            z-index: 1000; 
         }
-        .bodybox {
-            padding: 20px;
+        #agency{
+            list-style: none;
         }
-        .bodybox img {
-            padding-top: 60px;
-            border-radius: 8px;
-            max-width: 500px;
-            height: auto;
-            display: block;
+        #directory{
+            line-height: 30px;
         }
-        a:link {
-            color: #ffc81b;
-            background-color: transparent;
-            text-decoration: underline;
-        }
-        a:visited {
-            color: #dfd999;
-            background-color: transparent;
-            text-decoration: underline;
-        }
-        .date {
-            text-decoration: underline;
-        }
-        a:hover {
-            color: rgb(248, 243, 243);
-            background-color: transparent;
-            text-decoration: underline;
-        }
-   
-        .slideshow-container {
-            max-width: 900px;
-            position: relative;
-            margin: auto;
-        }
-        .slides {
-            display: none;
-        }
-        .prev, .next {
-            cursor: pointer;
-            position: absolute; 
-            top: 50%;
-            width: auto;
-            padding: 16px;
-            margin-top: -22px; 
-            color: white;
-            font-weight: bold;
-            font-size: 18px;
-            transition: 0.6s ease;
-            border-radius: 0 3px 3px 0;
-            user-select: none;
-            background-color: #12406b;
-        }
-        .next {
-            right: 0;
-            border-radius: 3px 0 0 3px;
-        }
-        .prev {
-            left: 0;
-            border-radius: 3px 0 0 3px;
-        }
-        .slideshow-buttons {
-            text-align: center;
-            margin-top: 10px;
-        }
-        .fade {
-            animation-name: fade;
-            animation-duration: 1.5s;
-        }
-        @keyframes fade {
-            from {opacity: .4} 
-            to {opacity: 1}
-        }
-        .main-content h1{
-            margin-left: -950px;
-        }
+    
     </style>
-    <script src="script.js"></script>
 </head>
 <body>
     <div id="fb-root"></div>
@@ -176,12 +100,7 @@
                 <div class="left-content">
                     <div class="logo-container">
                         <img src="logo_san.png" alt="Barangay Logo" class="logo">
-                        <h1>
-                            <span style="font-size: larger;">Barangay Centro San Antonio</span>
-                            <br>
-                            <hr style="border: 2px solid #b9203f;">
-                            <span style="font-size: large;">City of Ilagan, Isabela</span>
-                        </h1>
+                        <h1><span style="font-size: larger;">Barangay Centro San Antonio</span><br><hr style="border: 2px solid #b9203f;"><span style="font-size: large;">City of Ilagan, Isabela</span></h1>
                     </div>
                     <button class="menu-toggle" aria-label="Toggle navigation">
                         &#9776;
@@ -204,8 +123,8 @@
                                 </div>
                             </li>
                             <li><a href="officials.html">Barangay Officials</a></li>
-                            <li><a href="news.html" style="background-color: #ffc81b; color: #12406b; border-radius: 10px;">News/Events</a></li>
-                            <li><a href="contact.html">Contact Us</a></li>
+                            <li><a href="news.html">News/Events</a></li>
+                            <li><a href="contact.html" style="background-color: #ffc81b; color: #12406b; border-radius: 10px;">Contact Us</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -213,172 +132,104 @@
             </div>
         </header>
     </div>
-
     <div class="content-wrapper">
         <div class="main-content">
-            <h1>News and Events</h1>
+            <h1>Contact Us</h1>
             <div class="left-column">
-                <div class="bodybox" style="padding-top: 20px;">
-                    <img src="news/news1.jpg" alt="news" class="map-image">
-                    <article style="margin-bottom: 20px;">
-                        <span style="font-size: larger; font-weight: 600;">Latest:</span>
-                        <hr style="border: 2px solid #df1940; margin: 0; padding: 0;">
-                        <br>
-                        <span style="font-size: larger; font-style: italic;">
-                            <b>"Sa PPAN: Sama-sama sa Nutrisyong Sapat Para sa Lahat"</b>
-                        </span>
-                        <br><br>
-                        <span>
-                            TIGNAN: Bilang pakikiisa sa selebrasyon ng 50th Nutrition Month 2024, ang ating CSWDO and BH Workers, kasama ang Brgy. Officials ay nagkaisa upang bigyang halaga ang nutrisyon ng bawat bata sa ating barangay nitong Hulyo 26, 2024.
-                            <br><br>
-                            Nagkaroon ng feeding program para sa mga bata. Namigay rin po tayo ng mga gulay, prutas at vitamins upang mas lalong mapalakas ang resistansya ng mga bata. Maraming salamat po sa ating butihing bisita sa pagbibigay ng mensahe, Dra. Joan Paula Pagaliluan at sa lahat po ng nagbigay ng suporta at pumunta sa selebrasyong ito. Agyaman!
-                            <br><a href="https://web.facebook.com/share/p/fA3ZGaVPAqT4h9id/" target="_blank">See more</a>
-                            <br><br><span class="date" style="font-size: small; align-self: flex-end;">Date Posted: July 27, 2024</span>
-                        </span>
-                    </article>
-                    <hr style="border: 2px solid #4e7090; margin: 0; padding: 0;">
-                    <img src="news/news2.jpg" alt="news" class="map-image">
-                    <article style="margin-bottom: 20px;">
-                        <br>
-                        <span style="font-size: larger; font-style: italic;">
-                            <b>#BarangayUpdate: Campaign for Community Garden</b>
-                        </span>
-                        <br><br>
-                        <span>
-                            Sinimulan na ng mga residente ng Purok 5 ang pagsasagawa ng kanilang Purok Garden sa pamumuno ng kanilang Purok Kagawad, Kag. Brenda Gabuyo. Maraming salamat po sainyong agarang pagtugon sa Campaign for Community Garden. Inaasahan po namin ang ibang purok na magsimula na rin sa kani-kanilang Purok Garden. Agyaman!
-                            <br><br>
-                            #BagongCentroSanAntonio
-                            <br>
-                            #GulayanSaBarangay
-                            <br><a href="https://web.facebook.com/share/p/41qk38e9aXNJtnvT/" target="_blank">See more</a>
-                            <br><br><span class="date" style="font-size: small; align-self: flex-end;">Date Posted: July 25, 2024</span>
-                        </span>
-                    </article>
-
-                    <hr style="border: 2px solid #4e7090; margin: 0; padding: 0;">
-                    <img src="news/transpa.jpg" alt="news" class="map-image">
-                    <article style="margin-bottom: 30px;">
-                        <br>
-                        <span style="font-size: larger; font-style: italic;">
-                            <b>ULAT PINANSYAL PARA SA BARANGAY FIESTA 2024</b>
-                        </span>
-                        <br><br>
-                        <span>
-                            Sa ating layuning mapanatili ang transparency at pagkakaroon ng tiwala sa barangay, malugod naming ipinapakita ang detalyadong ulat pinansyal ng 2024 Barangay Fiesta. Nais naming ipakita sa lahat kung paano ginamit ang bawat sentimo ng pondo mula sa mga donasyon at iba pang pinagkunan ng kita, hanggang sa mga gastusin para sa mga programa at aktibidad.
-                            <br><br>
-                            Ang inyong suporta at pagtitiwala ay mahalaga sa atin, kaya't nararapat lamang na kayo ay aming ipaalam at bigyan ng kumpletong report tungkol sa pinansyal na aspeto ng ating Fiesta. Ang sumusunod na ulat ay naglalaman ng impormasyon ukol sa kita at gastusin, pati na rin ang balanse ng ating pondo. Ang natitirang balanse ay ilalaan para sa pagpapabuti at paglalagay ng grills sa bakod at gate ng barangay hall, pati na rin sa iba pang mga proyekto na mapagpapasyahan pa.
-                            <br><br>
-                            Salamat sa inyong walang sawang pakikiisa at pagtulong upang maging matagumpay ang ating pagdiriwang!<br><br>
-                Para sa karagdagang katanungan o komento, huwag mag-atubiling makipag-ugnayan sa ating Barangay Hall.<br><br>
-
-                            #BagongCentroSanAntonio
-                            <br>
-                            #GulayanSaBarangay
-                            <br><a href="https://web.facebook.com/share/p/dZ9jNuwLgbejRsoN/" target="_blank">See more</a>
-                            <br><br><span class="date" style="font-size: small; align-self: flex-end;">Date Posted: June 24, 2024</span>
-                        </span>
-                    </article>
-
-                    <hr style="border: 2px solid #4e7090; margin: 0; padding: 0;">
-                    <img src="news/news4.jpg" alt="news" class="map-image" style="width: 400px;">
-                    <article>
-                        <br>
-                        <span style="font-size: larger; font-style: italic;">
-                            <b>Happy Fiesta, San Antonio! </b>
-                        </span>
-                        <br><br>
-                        <span>
-                            Malugod na ipinagdiriwang ng Barangay Centro San Antonio ang Kapistahan ni San Antonio de Padua. Sa araw na ito, ating pinapahalagahan at ginugunita ang buhay at mga aral ni San Antonio, na kilala sa kanyang kabutihan at mga himala. Sama-sama nating ipagdiwang ang kanyang kapistahan sa pamamagitan ng pananampalataya, pagkakaisa, at pagtutulungan.
-                                       <br><br>
-                                       Nawa’y patuloy tayong gabayan ni San Antonio de Padua sa ating pang-araw-araw na buhay. Mabuhay ang ating patron! Mabuhay ang Barangay Centro San Antonio! 
-                            <br>
-                         
-                            <a href="https://web.facebook.com/share/p/jTWHS9w3GEKBeS9a/" target="_blank">See more</a>
-                            <br><br><span class="date" style="font-size: small; align-self: flex-end;">Date Posted: June 13, 2024</span>
-                        </span>
-                    </article>
-
-                </div>
-
-                <div class="bodybox" style="padding-top: 20px; padding-bottom: 20px;">
-                    <div class="slideshow-container">
-                        <div class="pictures">
-                            <div class="slides fade">
-                                <img src="news/Group 1.png" alt="news" class="map-image" style="width:100%">
-                            </div>
-                            <div class="slides fade">
-                                <img src="news/Group 2.png" alt="news" class="map-image" style="width:100%">
-                            </div>
-                            <div class="slides fade">
-                                <img src="news/Group 3.png" alt="news" class="map-image" style="width:100%">
-                            </div>
-                            <div class="slides fade">
-                                <img src="news/Group 4.png" alt="news" class="map-image" style="width:100%">
-                            </div>
-                            <div class="slides fade">
-                                <img src="news/Group 5.png" alt="news" class="map-image" style="width:100%">
-                            </div>
-                            <div class="slides fade">
-                                <img src="news/Group 6.png" alt="news" class="map-image" style="width:100%">
-                            </div>
-                        </div>
-                        
+                
+                <div class="bodybox">
+                 <div style="margin-top: 20px; padding-bottom: 10px; width: 200pxs; border-radius: 10px;">   
+                    <center><img src="emergency.svg" alt="emergency" style="color: #fff;width: 50px; margin-top: 20px;margin-bottom: 0; padding-bottom: 0;"></center>
+                <h2 style="margin-top: 10px;  font-size: 30px;">Barangay Centro San Antonio Emergency Hotlines<hr style="border: 2px solid #b9203f;"></h2>
+                
+            </div>
+                <div class="hotlines">
+                    <div class="column">
+                        <h3>Emergency Hotlines</h3>
+                        <ul id="agency">
+                            <li><img src="BFP.png" alt="BFP logo" style="width: 25px; vertical-align: middle;">Bureau of Fire Protection</li>
+                            <ul>
+                                <li><img src="phone_icon.png" alt="phone icon" style="width: 15px;"> 0975-250-1218</li>
+                                <li><img src="phone_icon.png" alt="phone icon" style="width: 15px;"> 0939-776-9969</li>
+                            </ul>
+                            <li><img src="pnp-logo.png" alt="PNP logo" style="width: 25px; vertical-align: middle;">Philippine National Police - Ilagan</li>
+                            <ul>
+                                <li><img src="phone_icon.png" alt="phone icon" style="width: 15px;"> 624-2032</li>
+                                <li><img src="phone_icon.png" alt="phone icon" style="width: 15px;"> 0917-145-5432/0916-742-4412</li>
+                            </ul>
+                            <li><img src="iselco.png" alt="ISELCO logo" style="width: 25px; vertical-align: middle;">Isabela Electric Cooperative II</li>
+                            <ul>
+                                <li><img src="phone_icon.png" alt="phone icon" style="width: 15px;"> 0917-867-3030</li>
+                                <li><img src="phone_icon.png" alt="phone icon" style="width: 15px;"> 0939-903-3911</li>
+                            </ul>
+                            <li><img src="cdrmo.png" alt="CDRRMO logo" style="width: 25px; vertical-align: middle;">City Disaster Risk Reduction and Management Office<br>(Rescue 1124)</li>
+                            <ul>
+                                <li><img src="phone_icon.png" alt="phone icon" style="width: 15px;"> 624-0203</li>
+                                <li><img src="phone_icon.png" alt="phone icon" style="width: 15px;"> 0915-234-1124</li>
+                            </ul>
+                            <li><img src="dart.png" alt="PDRRMO logo" style="width: 25px; vertical-align: middle;">Provincial Disaster Risk Reduction and Management Office<br>(Rescue 831)</li>
+                            <ul>
+                                <li><img src="phone_icon.png" alt="phone icon" style="width: 15px;"> 078-323-0416</li>
+                                <li><img src="phone_icon.png" alt="phone icon" style="width: 15px;"> 0915-819-3187</li>
+                            </ul>
+                            <li><img src="address.svg" alt="address">Address: <address>Centro San Antonio, City of Ilagan, Isabela 3300
+                            </address>
+                            <div class="map-csa"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5196.179612106776!2d121.95485780366946!3d17.091555599282003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3385410000d6c71f%3A0xf7aa0b7930a1bd02!2sCentro%20San%20Antonio%20Barangay%20Hall%20(New)!5e1!3m2!1sen!2sph!4v1721829888542!5m2!1sen!2sph" 
+                                width="200" height="700" style="border:1; max-width: 450px; height: 700px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+                            </li>
+                        </ul>
                     </div>
-                    <article style="margin-bottom: 40px;">
-                        <span style="font-size: larger; font-weight: 600;">Barangay Achievements:</span>
-                        <hr style="border: 2px solid #df1940; margin: 0; padding: 0;">
-                        <br>
-                        <span style="font-size: larger; font-style: italic;">
-                            <b>Celebrating Our Community's Success</b>
-                        </span>
-                        <br><br>
-                        <span>
-                            Discover the remarkable accomplishments of our Barangay and its residents. From community projects to individual achievements, this section highlights the dedication, hard work, and spirit that make our Barangay a thriving and inspiring place to live. Join us in celebrating these milestones that showcase the strength and unity of our community.
-                            <br><br><span class="date" style="font-size: small; align-self: flex-end;"></span>
-                            
-                        </span>
-                                                
-                    </article>
-                    <hr style="border: 2px solid #4e7090; margin: 0; padding: 0;">
-                    <img src="news/news3.jpg" alt="news" class="map-image" style="width: 400px;">
-                    <article style="margin-bottom: 120px;">
-                        <br>
-                        <span style="font-size: larger; font-style: italic;">
-                            <b>#Panagdayaw: </b>
-                        </span>
-                        <br>
-                        <span>
-                            Congratulations, Jessica A. Tamulto, of Purok 1, Centro San Antonio, for being hailed as 1st Place in the KKDAT-Ilagan Chapter Infographic Making Contest (Drugs): Barangay Edition. 
-                            <br><br>
-                            Thank you for representing our beloved barangay.
-                            <br><br>
-                            #BagongCentroSanAntonio
-                            <br><a href="https://web.facebook.com/share/p/W9zMmka5N35EXJUm/" target="_blank">See more</a>
-                            <br><br><span class="date" style="font-size: small; align-self: flex-end;">Date Posted: July 24, 2024</span>
-                        </span>
-                    </article>
-
-                    <hr style="border: 2px solid #4e7090; margin: 0; padding: 0;">
-                    <img src="achieve.jpg" alt="news" class="map-image" style="width: 400px;">
-                    <article>
-                        <br>
-                        <span style="font-size: larger; font-style: italic;">
-                            <b>𝐏𝐀𝐍𝐀𝐆𝐃𝐀𝐘𝐀𝐖: 𝐂𝐈𝐅𝐂 𝐡𝐚𝐢𝐥𝐞𝐝 𝐚𝐬 𝟑𝐫𝐝 𝐑𝐮𝐧𝐧𝐞𝐫- 𝐔𝐩 𝐝𝐮𝐫𝐢𝐧𝐠 𝐭𝐡𝐞 𝟏𝐬𝐭 𝐌𝐚𝐲𝐨𝐫'𝐬 𝐂𝐮𝐩 𝐀𝐬𝐢𝐝𝐞 𝐈𝐧𝐯𝐢𝐭𝐚𝐭𝐢𝐨𝐧𝐚𝐥 𝐅𝐨𝐨𝐭𝐛𝐚𝐥𝐥 𝐓𝐨𝐮𝐫𝐧𝐚𝐦𝐞𝐧𝐭 𝟐𝟎𝟐𝟒 </b>
-                        </span>
-                        <br><br>
-                        <span>
-                            On behalf of our beloved barangay, we would like to send you our warmest congratulations to your team!                            <br><br>
-                            Thank you for representing our beloved barangay.<br><br>
-                            𝐒𝐦𝐚𝐥𝐥 𝐛𝐮𝐭 𝐭𝐞𝐫𝐫𝐢𝐛𝐥𝐞!  Thank you for representing our Barangay and most especially, the City of Ilagan. We're so proud of you!
-                            <br><br>
-                            #BagongCentroSanAntonio
-                            <br><a href="https://web.facebook.com/share/p/5XbCqAmhz1emkeC8/" target="_blank">See more</a>
-                            <br><br><span class="date" style="font-size: small; align-self: flex-end;">Date Posted: June 30, 2024</span>
-                        </span>
-                    </article>
-
-                    
+                    <div class="column" id="directory">
+                        <h3>Directory</h3>
+                        <ul>
+                            <li><img src="phone_icon.png" alt="phone icon" style="width: 15px;"> Punong Barangay Nestor T. Tamulto - 0916 627 0876</li>
+                            <li><img src="phone_icon.png" alt="phone icon" style="width: 15px;"> Kag. Clifford Dan Cayapan - 09457 627 228</li>
+                            <li><img src="phone_icon.png" alt="phone icon" style="width: 15px;"> Kag. Brendalyn B. Gabuyo - 0906 783 2754</li>
+                            <li><img src="phone_icon.png" alt="phone icon" style="width: 15px;"> Kag. Amacho B. Maltizo - 0955 688 2351</li>
+                            <li><img src="phone_icon.png" alt="phone icon" style="width: 15px;"> Kag. Tirso T. Tamulto - 0936 287 3445</li>
+                            <li><img src="phone_icon.png" alt="phone icon" style="width: 15px;"> Kag. Jerry R. Baysac - 0935 547 0809</li>
+                            <li><img src="phone_icon.png" alt="phone icon" style="width: 15px;"> Kag. Jowell C. Manding - 0906 862 6052</li>
+                            <li><img src="phone_icon.png" alt="phone icon" style="width: 15px;"> Kag. Imelda A. Casauay - 0975 594 4205</li>
+                            <li><img src="phone_icon.png" alt="phone icon" style="width: 15px;"> SK Chairman Aerome Josh Cabalonga - 0949 336 5194</li>
+                            <li><img src="phone_icon.png" alt="phone icon" style="width: 15px;"> Sec. El Shaira Joy M. Manuel - 0953 055 9874</li>
+                            <li><img src="phone_icon.png" alt="phone icon" style="width: 15px;"> Treas. Leandro G. Viernes - 0915 220 7967</li>
+                            <li><img src="phone_icon.png" alt="phone icon" style="width: 15px;"> Clerk Encoder Kathryn Angel B. Lagat - 0945 283 5125</li>
+                            <li><img src="phone_icon.png" alt="phone icon" style="width: 15px;">Jane Pableo (Midwife) - 0935 616 2886</li>
+                            <li><img src="phone_icon.png" alt="phone icon" style="width: 15px;">Esminia B. Pajarillo (BNS) - 0935 663 4385</li>
+                            <li><img src="phone_icon.png" alt="phone icon" style="width: 15px;">Virginia R. Pajarillo (BHW) - 0975 906 3867</li>
+                            <li><img src="phone_icon.png" alt="phone icon" style="width: 15px;">Judy Ann Cabantac (BHW) - 0966 703 6503</li>
+                            <li><img src="phone_icon.png" alt="phone icon" style="width: 15px;">Remedios Baysac (BHW) - 0935 172 2180</li>
+                            <li><img src="phone_icon.png" alt="phone icon" style="width: 15px;">Rosalyn Visayas (BHW) - 0926 926 9824</li>
+                            <li><img src="phone_icon.png" alt="phone icon" style="width: 15px;">Grace Rayandayan (BHW) - 0975 075 8633</li>
+                            <li>Rescue 1124 - 
+                                <ul>
+                                    <li><img src="phone_icon.png" alt="phone icon" style="width: 15px;">Globe: 0915 234 1124</li>
+                                    <li><img src="phone_icon.png" alt="phone icon" style="width: 15px;">Smart: 0919 844 3346</li>
+                                </ul>
+                            </li>
+                            <li>Police Station - 
+                                <ul>
+                                    <li><img src="phone_icon.png" alt="phone icon" style="width: 15px;">0917 145 5432</li>
+                                    <li><img src="phone_icon.png" alt="phone icon" style="width: 15px;">IPPO: 0917 501 8212</li>
+                                </ul>
+                            </li>
+                            <li><img src="phone_icon.png" alt="phone icon" style="width: 15px;">Fire Station - Globe: 0975 250 1218</li>
+                            <li>CSWD Ilagan Bantay Bata - 
+                                <ul>
+                                    <li><img src="phone_icon.png" alt="phone icon" style="width: 15px;">Ma. Rosario Yumul: 0906 385 3026</li>
+                                    <li><img src="phone_icon.png" alt="phone icon" style="width: 15px;">Mel Quiades Sabado: 0917 798 9622</li>
+                                </ul>
+                            </li>
+                            <li><img src="phone_icon.png" alt="phone icon" style="width: 15px;">CMRRMC / CDRRMO - 078 6240203 / 0915 234 1124</li>
+                            <li><img src="phone_icon.png" alt="phone icon" style="width: 15px;">SDO - DRRM - 0905 792 2861</li>
+                            <li><img src="phone_icon.png" alt="phone icon" style="width: 15px;">DOH Region 2 - 304 - 3532</li>
+                            <li><img src="facebook.png" alt="fb" style="width: 15px;">Facebook Page - <a href="https://web.facebook.com/BagongCentrosanAntonio">Bagong Centro San Antonio</a></li>
+                            <li><img src="email.png" alt="email icon" style="width: 15px;">Email - <a href="mailto:centrosanantonio1981@gmail.com">centrosanantonio1981@gmail.com</a></li>
+                        </ul>
+                    </div>
                 </div>
+                
+            </div>
             </div>
         </div>
     </div>
@@ -386,26 +237,8 @@
         <p>Copyright &copy; 2024 Barangay Centro San Antonio, City of Ilagan, Isabela</p>
         <p>Designed by: Jayvee Alicando and Kay Cee Laureta</p>
     </footer>
- 
+    <script src="script.js"></script>
     
-    <script>
-        let slideIndex = 0;
-        showSlides();
-
-        function showSlides() {
-            let slides = document.getElementsByClassName("slides");
-            for (let i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";
-            }
-            slideIndex++;
-            if (slideIndex > slides.length) {slideIndex = 1}
-            slides[slideIndex-1].style.display = "block";
-            setTimeout(showSlides, 5000);
-        }
-
-        function plusSlides(n) {
-            showSlides(slideIndex += n);
-        }
-    </script>
 </body>
 </html>
+
