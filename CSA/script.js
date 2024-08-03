@@ -88,11 +88,13 @@ setInterval(() => {
   }
 }, 5000); 
 
-document.addEventListener('DOMContentLoaded', function () {
-    const menuToggle = document.querySelector('.menu-toggle');
-    const navbar = document.querySelector('.navbar ul');
-
-    menuToggle.addEventListener('click', function () {
-        navbar.classList.toggle('show');
+document.addEventListener('DOMContentLoaded', function() {
+    document.querySelector('.menu-toggle').addEventListener('click', function() {
+      var menu = document.querySelector('.navbar ul');
+      if (menu.style.display === 'block') {
+        menu.style.display = 'none';
+      } else {
+        menu.style.display = 'block';
+      }
     });
-});
+  });
